@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    background-color: rgba(91, 35, 134, 1);
+}
+html {
+    font-size: 62.5%;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'GmarketSansMedium', sans-serif;
+    font-weight: 400;
+}
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 헤더 */
+.ally-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+header {
+    margin: 12rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26.5rem;
+    background: url(/images/clock.png) no-repeat center center;
+    background-size: 26.1rem 26.5rem;
+    text-align: center;
+}
+header img {
+    width: 56.4rem;
+    height: 11.2rem;
+    display: block;
+}
+/* 메인 */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* 메인-sec1 */
+.about .practice {
+    font-family: 'OTEnjoystoriesBA', sans-serif;
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: rgba(245, 223, 77, 1);
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.about .desc {
+    margin: 7.8rem auto 0;
+    width: 37.3rem;
+    height: 8.5rem;
+
+
+    font-size: 1.8rem;
+    line-height: 130%;
+    letter-spacing: 0;
+    white-space: normal;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+    .strong {
+        font-weight: 700;
+        font-size: 2.4rem;
+    }
+}
+.about .example {
+    margin: 10.2rem auto 0;
+    width: 51.4rem;
+    height: 5.7rem;
+    font-size: 2.4rem;
+    line-height: 160%;
+}
+.blank {
+    width: 22.8rem;
+    height: 5.6rem;
+    margin: auto 1.7rem;
+    background: rgba(255,255,255,1);
+    border-radius: 0.7rem;
+    }
+input::placeholder {
+    font-family: 'GmarketSansMedium', sans-serif;
+    color: rgba(186, 188, 190,1);
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 5.6rem;
+}
+/* 메인-sec2 */
+.howto {
+    margin: 11.5rem auto 0;
+}
+.sub-title2 {
+    margin: 11.5rem auto 0;
+    display: flex;
+    flex-direction: row;
+
+}
+.howmany {
+    color: rgba(91, 35, 134, 1);
+    font-family: 'GmarketSansMedium', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    
+    line-height: 1.6rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(252, 238, 33, 1);
+    border-radius: 5.6rem;
+    padding: 2.1rem 4.9rem 2.1rem 4.9rem;
+    gap: 1rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+img .click {
+    margin-top: 1.4rem;
+    width: 6.4rem;
+    height: 7.2rem;
+}
+.answer {
+    margin-top: 14.7rem;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 160%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    white-space: normal;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+}
+.big2 {
+        font-weight: 700;
+        font-size: 7.2rem;
+    }
+
+/* 푸터 */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width: 360px) {
+
+}
