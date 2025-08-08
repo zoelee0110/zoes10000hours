@@ -49,8 +49,6 @@ header img {
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 /* 메인-sec1 */
@@ -73,20 +71,19 @@ main {
     font-size: 1.8rem;
     line-height: 130%;
     letter-spacing: 0;
-    white-space: normal;
+    white-space: nowrap;
     text-align: center;
-    overflow-wrap: break-word;
-    word-break: keep-all;
 
     /* 따옴표 양옆 배치를 위해 전체 row배열 */
     display: flex;
     flex-direction: row;
-    /* 줄의 기준점 부여 */
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 /* 따옴표 왜 안내려 감??????? */
 .big {
     display: inline-block;
+    align-items: flex-end;
     transform: translateY(1.3rem);  
     width: 4.6rem;
     height: 9.6rem;
@@ -137,7 +134,6 @@ input::placeholder {
 }
 /* 버튼과 이미지 (부모요소) */
 .sub-title2 {
-    margin-top: 11.5rem;
     position: relative;
     width: fit-content;
     left: 50%;
@@ -173,7 +169,7 @@ input::placeholder {
     margin-top: 14.7rem;
     font-weight: 400;
     font-size: 2.4rem;
-    line-height: 160%;
+    line-height: 100%;
     letter-spacing: 0;
 
     vertical-align: middle;
@@ -190,8 +186,9 @@ input::placeholder {
 /* sec3 */
 .button .btn {
     margin-top: 12.7rem;
+    display: flex;
+    justify-content: center;
 }
-
 /* class=btn */
 .program, .share {
     color: rgba(91, 35, 134, 1);
@@ -246,4 +243,108 @@ footer {
 /* 모바일 반응형 */
 @media screen and (max-width: 360px) {
 
+
+/* 헤더 백그라운드 시계 */
+header {
+    margin: 6.5rem auto 0;
+    height: 12.6rem;
+    background-size: 12.5rem 12.5rem;
+    text-align: center;
+}
+header img {
+    width: 26.7rem;
+    height: 5.3rem;
+}
+
+/* 메인-sec1 */
+/* 인용구 */
+.about .practice {
+    font-size: 2.2rem;
+}
+.desc, .strong {
+    font-size: 1.4rem;
+}
+.big {
+    font-size: 4.8rem;
+}
+/* 빈칸 있는 목록태그 */
+.about .example {
+    font-size: 1.4rem;
+    margin: 6.2rem 2.4rem 0;
+}
+.blank {
+    width: 15.6rem;
+    height: 3.7rem;
+}
+/* 빈칸 속성_고정값 */
+input::placeholder {
+    font-size: 1.4rem;
+}
+.howto {
+    margin: 4.9rem auto 0;
+}
+.howmany {
+    font-size: 1.4rem;
+    line-height: 1;
+    white-space: initial;
+    word-break: break-all;
+    position: relative;
+
+    width: 24.1rem;
+    height: 6.8rem;
+    padding: 2.3rem 4.9rem 2.1rem 4.9rem;
+    gap: 1rem;
+    border-radius: 1.3rem;
+}
+.click {
+    width: 4.3rem;
+    height: 4.8rem;
+    position: absolute;
+    top: 3rem;
+    left: calc(100%+0.6rem);
+}
+.answer {
+    margin-top: 6.4rem;
+    font-size: 1.4rem;
+}
+.days {
+    margin-top: 1.5rem;
+}
+.big2 {
+    font-size: 2.4rem;
+}
+/* sec3 */
+.button .btn {
+    margin-top: 5.5rem;
+}
+/* class=btn */
+.program, .share {
+    font-size: 1.4rem;
+    border-radius: 56px;
+    padding: 2.2rem 4.9rem 2.1rem 4.9rem;
+    gap: 1rem;
+}
+.program {
+    width: 18.6rem;
+    height: 4rem;
+}
+.share {
+    width: 9.2rem;
+    height: 4rem;
+}
+/* 푸터 */
+footer {
+    margin: 8.3rem auto 0;
+}
+.weniv-logo {
+    width: 9.1rem;
+    height: 1.8rem;
+}
+.copyright {
+    margin-top: 1.7rem;
+    width: 27.4rem;
+    height: 2.6rem;
+
+    font-size: 0.9rem;
+}
 }
