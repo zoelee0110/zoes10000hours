@@ -150,15 +150,9 @@ input::placeholder {
     
     line-height: 1.6rem;
 
-    /* display: inline-flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center; */
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+    justify-content: center;
 
     background-color: rgba(252, 238, 33, 1);
     border-radius: 5.6rem;
