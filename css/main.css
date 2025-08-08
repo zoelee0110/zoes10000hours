@@ -191,6 +191,7 @@ input::placeholder {
 .button .btn {
     margin-top: 12.7rem;
 }
+
 /* class=btn */
 .program, .share {
     color: rgba(91, 35, 134, 1);
@@ -199,14 +200,9 @@ input::placeholder {
     font-size: 2.4rem;
     line-height: 1.6rem;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
     background-color: rgba(255,255,255,1);
     border-radius: 5.6rem;
     padding: 2.1rem 4.9rem 2.1rem 4.9rem;
-    gap: 1.8rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .program {
