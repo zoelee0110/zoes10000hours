@@ -1,21 +1,19 @@
+/* 전체 배경 컬러 적용, 박스 적용 */
 * {
     box-sizing: border-box;
     background-color: rgba(91, 35, 134, 1);
 }
+/* rem계산 용이하도록, 가장 많은 폰트 속성 적용 */
 html {
-    font-size: 62.5%;
+    font-size: 62.5%;           /* 10px적용함 */
     color: rgba(255, 255, 255, 1);
     font-family: 'GmarketSansMedium', sans-serif;
     font-weight: 400;
 }
-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
 
-/* 헤더 */
-.ally-hidden {
+/* header (1만시간의 법칙 이미지) */
+
+.ally-hidden {                  /* 제목 글씨 숨기기 */
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
   width: 1px;
@@ -25,10 +23,9 @@ body {
   padding: 0;
   position: absolute;
 }
-
+/* 헤더의 백그라운드 이미지 깔기 (시계) */
 header {
     margin: 12rem;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,21 +34,29 @@ header {
     background-size: 26.1rem 26.5rem;
     text-align: center;
 }
+/* 헤더 내부에 img태그 속성주기 > 인라인요소인데 블록처럼 보여주기 */
 header img {
     width: 56.4rem;
     height: 11.2rem;
     display: block;
 }
-/* 메인 */
+
+/* main 구조 
+   -sec1 - blockquote, div(div), ul(li)
+   -sec2 - div(btn, img), div(div2)
+   -sec3 - div(btn2) */
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 /* 메인-sec1 */
+/* 인용구 */
 .about .practice {
-    font-family: 'OTEnjoystoriesBA', sans-serif;
+    font-family :'OTEnjoystoriesBA', sans-serif;
     font-size: 3.6rem;
     font-weight: 700;
     color: rgba(245, 223, 77, 1);
@@ -60,11 +65,10 @@ main {
     text-align: center;
     vertical-align: middle;
 }
-.about .desc {
+/* 1만시간법칙은 설명, 따옴표 */
+.desc {
     margin: 7.8rem auto 0;
     width: 37.3rem;
-    height: 8.5rem;
-
 
     font-size: 1.8rem;
     line-height: 130%;
@@ -73,25 +77,50 @@ main {
     text-align: center;
     overflow-wrap: break-word;
     word-break: keep-all;
-    .strong {
-        font-weight: 700;
-        font-size: 2.4rem;
-    }
+
+    /* 따옴표 양옆 배치를 위해 전체 row배열 */
+    display: flex;
+    flex-direction: row;
+    /* 줄의 기준점 부여 */
+    align-items: flex-start;
 }
+/* 따옴표 왜 안내려 감??????? */
+.big {
+    display: inline-block;
+    transform: translateY(1.3rem);  
+    width: 4.6rem;
+    height: 9.6rem;
+    font-weight: 700;
+    font-size: 9.6rem;
+    color: rgba(252, 238, 33, 0.3);
+        
+    }
+/* 일만시간 굵은 글씨 */
+.strong {
+    font-weight: 700;
+    font-size: 2.4rem;
+    }
+/* 빈칸 있는 목록태그 */
 .about .example {
     margin: 10.2rem auto 0;
-    width: 51.4rem;
-    height: 5.7rem;
     font-size: 2.4rem;
     line-height: 160%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.7rem;
 }
+/* 빈칸 속성 */
 .blank {
     width: 22.8rem;
     height: 5.6rem;
     margin: auto 1.7rem;
     background: rgba(255,255,255,1);
     border-radius: 0.7rem;
+    text-align: center;
     }
+/* 빈칸 속성_고정값 */
 input::placeholder {
     font-family: 'GmarketSansMedium', sans-serif;
     color: rgba(186, 188, 190,1);
@@ -99,16 +128,20 @@ input::placeholder {
     text-align: center;
     line-height: 5.6rem;
 }
+
 /* 메인-sec2 */
+/* 위 띄어쓰기, 배열을 위한 속성 */
 .howto {
     margin: 11.5rem auto 0;
+    position: relative;
 }
+/* 버튼과 이미지 (부모요소) */
 .sub-title2 {
     margin: 11.5rem auto 0;
     display: flex;
     flex-direction: row;
-
 }
+/* 버튼요소 */
 .howmany {
     color: rgba(91, 35, 134, 1);
     font-family: 'GmarketSansMedium', sans-serif;
@@ -117,9 +150,15 @@ input::placeholder {
     
     line-height: 1.6rem;
 
-    display: inline-flex;
+    /* display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 
     background-color: rgba(252, 238, 33, 1);
     border-radius: 5.6rem;
@@ -137,24 +176,77 @@ img .click {
     font-weight: 400;
     font-size: 2.4rem;
     line-height: 160%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     vertical-align: middle;
     white-space: normal;
     text-align: center;
     overflow-wrap: break-word;
     word-break: keep-all;
 }
+.days {
+    margin-top: 1.7rem;
+}
 .big2 {
         font-weight: 700;
         font-size: 7.2rem;
     }
 
-/* 푸터 */
-footer {
-    display: flex;
-    flex-direction: column;
+.button .btn {
+    margin-top: 12.7rem;
+}
+.program, .share {
+    color: rgba(91, 35, 134, 1);
+    font-family: 'GmarketSansMedium', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.6rem;
+
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    background-color: rgba(255,255,255,1);
+    border-radius: 5.6rem;
+    padding: 2.1rem 4.9rem 2.1rem 4.9rem;
+    gap: 1.8rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.program {
+    background-color: rgba(252, 238, 33, 1);
+}
+
+/* 푸터 */
+footer {
+    margin: 13rem auto 0;
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.weniv-logo {
+    width: 12.5rem;
+    height: 2.5rem;
+}
+.copyright {
+    width: 36.5rem;
+    height: 3.4rem;
+    
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 100%;
+    white-space: normal;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+
+    margin-top: 2rem;
+
 }
 
 /* 모바일 반응형 */
