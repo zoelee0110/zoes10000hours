@@ -206,7 +206,7 @@ input::placeholder {
     background-color: rgba(255,255,255,1);
     border-radius: 5.6rem;
     border: none;
-    padding: 2re. 5rem;
+    padding: 2rem 5rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .program {
@@ -316,7 +316,10 @@ footer {
 
 }
 
-/* 모바일 반응형 */
+/* !!!!왁자지껄!!! !!!!이목집중!!!! 여기가!!! */
+/* !!!!반응형!!!! 여기!!!! 여기부터!!!! */
+
+/* 모바일 반응형 시작부분 */
 @media screen and (max-width: 360px) {
 
 
@@ -389,7 +392,7 @@ input::placeholder {
     height: 4.8rem;
     position: absolute;
     top: 4rem;
-    left: calc(100%+0.6rem);
+    left: calc(100% + 0.6rem);
 }
 /* 당신은 ~~필요합니다 */
 .answer {
