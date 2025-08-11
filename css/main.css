@@ -330,25 +330,33 @@ header img {
 /* 인용구 */
 .about .practice {
     font-size: 2.2rem;
+    margin-top: 3.2rem;
 }
 .desc, .strong {
     font-size: 1.4rem;
 }
 .big {
     font-size: 4.8rem;
+    width: 2rem;
+    height: 1.8rem;
 }
 /* 빈칸 있는 목록태그 */
 .about .example {
     font-size: 1.4rem;
-    margin: 6.2rem 2.4rem 0;
+    gap: 1.2rem;
+}
+.example-profession, .example-practice {
+    display: flex;
+    justify-content: center;
 }
 .blank {
     width: 15.6rem;
-    height: 3.7rem;
+    height: auto;
 }
 /* 빈칸 속성_고정값 */
 input::placeholder {
     font-size: 1.4rem;
+    padding: 1.2rem 4rem;
 }
 .howto {
     margin: 4.9rem auto 0;
