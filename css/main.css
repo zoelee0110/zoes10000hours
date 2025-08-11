@@ -13,15 +13,15 @@ html {
 
 /* header (1만시간의 법칙 이미지) */
 
-.ally-hidden {                  /* 제목 글씨 숨기기 */
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
+.a11y-hidden {                  /* 제목 글씨 숨기기 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
 }
 /* 헤더의 백그라운드 이미지 깔기 (시계) */
 header {
@@ -42,8 +42,8 @@ header img {
 }
 
 /* main 구조 
-   -sec1 - blockquote, div(div), ul(li)
-   -sec2 - div(btn, img), div(div2)
+    -sec1 - blockquote, div(div), ul(li)
+    -sec2 - div(btn, img), div(div2)
    -sec3 - div(btn2) */
 
 main {
@@ -54,7 +54,7 @@ main {
 /* 메인-sec1 */
 /* 인용구 */
 .about .practice {
-    font-family :'OTEnjoystoriesBA', sans-serif;
+    font-family :'OTEnjoystoriesBA';
     font-size: 3.6rem;
     font-weight: 700;
     color: rgba(245, 223, 77, 1);
@@ -63,13 +63,13 @@ main {
     text-align: center;
     vertical-align: middle;
 }
-/* 1만시간법칙은 설명, 따옴표 */
+/* 1만시간법칙은 설명, 따옴표  */
 .desc {
     margin: 7.8rem auto 0;
     width: 37.3rem;
 
     font-size: 1.8rem;
-    line-height: 130%;
+    line-height: 1.8;
     letter-spacing: 0;
     white-space: nowrap;
     text-align: center;
@@ -80,11 +80,10 @@ main {
     align-items: center;
     justify-content: center;
 }
-/* 따옴표 왜 안내려 감??????? */
+/* 따옴표 */
 .big {
     display: inline-block;
     align-items: flex-end;
-    transform: translateY(1.3rem);  
     width: 4.6rem;
     height: 9.6rem;
     font-weight: 700;
@@ -101,11 +100,9 @@ main {
 .about .example {
     margin: 10.2rem auto 0;
     font-size: 2.4rem;
-    line-height: 160%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 2.7rem;
 }
 /* 빈칸 속성 */
@@ -114,16 +111,18 @@ main {
     height: 5.6rem;
     margin: auto 1.7rem;
     background: rgba(255,255,255,1);
-    border-radius: 0.7rem;
+    border-radius: 0.8rem;
     text-align: center;
-    }
+    border: none;
+    padding: 1.2rem 4rem;
+}
 /* 빈칸 속성_고정값 */
 input::placeholder {
-    font-family: 'GmarketSansMedium', sans-serif;
+    font-family: 'GmarketSansMedium';
     color: rgba(186, 188, 190,1);
     font-size: 2.4rem;
     text-align: center;
-    line-height: 5.6rem;
+    line-height: 2.4rem;
 }
 
 /* 메인-sec2 */
@@ -148,6 +147,7 @@ input::placeholder {
     line-height: 1.6rem;
     white-space: nowrap;
     position: relative;
+    border: none;
 
     background-color: rgba(252, 238, 33, 1);
     border-radius: 5.6rem;
@@ -165,12 +165,12 @@ input::placeholder {
     left: 100%;
 }
 /* 프로그래밍, 5110일 */
+/* 글씨 가운데 정렬이 안됨 ㅠㅠ */
 .answer {
     margin-top: 14.7rem;
     font-weight: 400;
     font-size: 2.4rem;
     line-height: 100%;
-    letter-spacing: 0;
 
     vertical-align: middle;
     text-align: center;
@@ -188,6 +188,7 @@ input::placeholder {
     margin-top: 12.7rem;
     display: flex;
     justify-content: center;
+    border: none;
 }
 /* class=btn */
 .program, .share {
@@ -205,6 +206,75 @@ input::placeholder {
 .program {
     background-color: rgba(252, 238, 33, 1);
 }
+
+
+/* 모달창 */
+/* 모달 창 전체 속성 */
+    .modal {
+        display: none;
+
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        width: 100%;
+        
+    }
+    .modal .modal-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 80rem;
+        border-radius: 2rem;
+        padding: 8rem 14.6rem;
+        gap: 1rem;
+        border: none;
+        box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.15);
+        background-color: rgba(255, 255, 255, 1);
+    }
+/* 모달창 제목 */
+    .cheers {
+        margin-top: 7.6rem;
+        font-family: 'OTEnjoystoriesBA';
+        font-size: 9.6rem;
+        font-weight: 700;
+        color: rgba(91,35,134,1);
+        background-color: rgba(255, 255, 255, 1);
+    }
+    /* 응원멘트 */
+    .cheers-cont {
+        margin-top: 0.4rem;
+        font-family: 'OTEnjoystoriesBA';
+        color: rgba(91,35,134,1);
+        font-size: 3.6rem;
+        font-weight: 700;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    /* 이미지 */
+    .licat {
+        margin: 2.9rem 10rem 7.4rem;
+        width: 43.3rem;
+        height: 33.7rem;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    /* 버튼 */
+    .gotopage {
+        background-color: rgba(252,238,33,1);
+        border-radius: 1.2rem;
+        padding: 2.1rem 4.9rem;
+        gap: 1rem;
+        border: none;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        width: fit-content;
+
+        font-family:'GmarketSansMedium';
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: rgba(91,35,134,1);
+    }
+
 
 /* 푸터 */
 footer {
