@@ -109,7 +109,6 @@ main {
 .blank {
     width: 22.8rem;
     height: 5.6rem;
-    margin: auto 1.7rem;
     background: rgba(255,255,255,1);
     border-radius: 0.8rem;
     text-align: center;
@@ -207,7 +206,7 @@ input::placeholder {
     background-color: rgba(255,255,255,1);
     border-radius: 5.6rem;
     border: none;
-    padding: 2.1rem 4.9rem 2.1rem 4.9rem;
+    padding: 2re. 5rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .program {
