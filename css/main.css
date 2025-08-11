@@ -348,7 +348,6 @@ header img {
     height: 1.8rem;
 }
 /* 빈칸 있는 목록태그 */
-/* 반응형 양식 깨짐 모르겠음 ㅠㅠ */
 .about .example {
     font-size: 1.4rem;
     gap: 1.2rem;
@@ -356,7 +355,7 @@ header img {
 }
 .example-profession, .example-practice {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
