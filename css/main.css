@@ -165,9 +165,9 @@ input::placeholder {
     left: 100%;
 }
 /* 프로그래밍, 5110일 */
-/* 글씨 가운데 정렬이 안됨 ㅠㅠ */
 .answer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
@@ -194,7 +194,7 @@ input::placeholder {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: none;
+    gap: 1.2rem;
 }
 /* class=btn */
 .program, .share {
@@ -206,6 +206,7 @@ input::placeholder {
 
     background-color: rgba(255,255,255,1);
     border-radius: 5.6rem;
+    border: none;
     padding: 2.1rem 4.9rem 2.1rem 4.9rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
@@ -355,7 +356,9 @@ header img {
 }
 .example-profession, .example-practice {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .blank {
     width: 15.6rem;
