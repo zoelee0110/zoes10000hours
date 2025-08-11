@@ -176,8 +176,7 @@ input::placeholder {
     font-weight: 400;
     font-size: 2.4rem;
     line-height: 100%;
-
-    
+    gap: 2rem;
 }
 .days {
     margin-top: 4.1rem;
@@ -185,6 +184,7 @@ input::placeholder {
 .big2 {
         font-weight: 700;
         font-size: 7.2rem;
+        vertical-align: middle;
     }
 
 /* sec3 */
@@ -299,6 +299,7 @@ footer {
     width: 12.5rem;
     height: 2.5rem;
 }
+/* 질문1 줄바꿈이 이상해요 */
 .copyright {
     width: 36.5rem;
     height: 3.4rem;
@@ -344,12 +345,14 @@ header img {
 .desc, .strong {
     font-size: 1.4rem;
 }
+/* 질문2 따옴표가 너무 내려갔어요 */
 .big {
     font-size: 4.8rem;
     width: 2rem;
     height: 1.8rem;
 }
 /* 빈칸 있는 목록태그 */
+/* 질문3 여기서부터 완전 총체적 난국 */
 .about .example {
     font-size: 1.4rem;
     gap: 1.2rem;
