@@ -204,7 +204,7 @@ input::placeholder {
     justify-content: center;
     gap: 1.2rem;
 }
-.btn.white {
+.btn.wh {
     background-color: rgba(255, 255, 255, 1);
     color: rgba(91, 35, 134, 1);
 }
@@ -310,7 +310,7 @@ footer {
 /* !!!!반응형!!!! 여기!!!! 여기부터!!!! */
 
 /* 모바일 반응형 시작부분 */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 620px) {
 
 
 /* 헤더 백그라운드 시계 */
@@ -327,95 +327,74 @@ header img {
 
 /* 메인-sec1 */
 /* 인용구 */
-.about .practice {
+.about .q {
     font-size: 2.2rem;
     margin-top: 3.2rem;
 }
-.desc, .strong {
+.desc .desc-text{
+    font-size: 1.4rem;
+    line-height: 130%;
+}
+.desc .strong {
+    font-weight: 500;
     font-size: 1.4rem;
 }
-/* 질문2 따옴표가 너무 내려갔어요 */
-.big {
-    font-size: 4.8rem;
-    width: 2rem;
-    height: 1.8rem;
+/* 메인-sec2 */
+/* form태그 */
+.form {
+    margin-top: 6rem;
+    box-sizing: border-box;
 }
-/* 빈칸 있는 목록태그 */
-/* 질문3 여기서부터 완전 총체적 난국 */
-.about .example {
+.profes, .practice {
     font-size: 1.4rem;
-    gap: 1.2rem;
+    gap: 0.8rem;
     vertical-align: middle;
-}
-.example-profession, .example-practice {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 .blank {
+    padding: 1.2rem 4rem;
     width: 15.6rem;
-    height: auto;
 }
 /* 빈칸 속성_고정값 */
 input::placeholder {
     font-size: 1.4rem;
-    padding: 1.2rem 4rem;
 }
-/* 나는 며칠동안 어쩌구 섹션 */
-.howto {
-    margin: 4.9rem auto 0;
-}
-.howmany {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    white-space: initial;
-    word-break: break-all;
-    position: relative;
-
-    width: 24rem;
-    height: auto;
+/* 크기 줄어드는거 모르겠음 */
+/* 제출(버튼) */
+.btn.submit {
+    margin-top: 8rem;
     padding: 2rem 5rem;
-    gap: 1rem;
-    border-radius: 1.2rem;
+    font-size: 1.4rem;
+    width: 24rem;
 }
-.click {
+/* 클릭 이미지 */
+.btn.submit::after {
     width: 4.3rem;
-    height: 4.8rem;
-    position: absolute;
+    right: -4.3rem; 
     top: 4rem;
-    left: calc(100% + 0.6rem);
 }
-/* 당신은 ~~필요합니다 */
+/* 메인-sec3 */
+/* 결과 도출 화면 */
+/* 프로그래밍, 5110일 */
 .answer {
     margin-top: 6.4rem;
+    margin-bottom: 5.2rem;
     font-size: 1.2rem;
 }
 .days {
     margin-top: 1.6rem;
 }
-.big2 {
+.big {
     font-size: 2.4rem;
     font-weight: 500;
 }
-/* sec3 */
-.button .btn {
-    margin-top: 5.2rem;
-}
-/* class=btn */
-.program, .share {
+/* 메인-sec4 */
+/* 외부 페이지로 연결되는 버튼 */
+.btn.pp, .btn.wh {
     font-size: 1.4rem;
-    border-radius: 1.2rem;
+    font-weight: 500;
     padding: 1.6rem 2.4rem;
     gap: 1rem;
-}
-.program {
-    width: 18.6rem;
-    height: 4rem;
-}
-.share {
-    width: 9.2rem;
-    height: 4rem;
 }
 
 /* 모달창 */
@@ -457,7 +436,7 @@ footer {
 }
 .copyright {
     margin-top: 1.2rem;
-
+    margin-bottom: 4.8rem;
     font-size: 0.9rem;
 }
 }
