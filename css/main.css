@@ -1,19 +1,21 @@
-/* 전체 배경 컬러 적용, 박스 적용 */
+
+/* 전체 배경 컬러 적용 , 박스 적용 (제거) */
 * {
-    box-sizing: border-box;
     background-color: rgba(91, 35, 134, 1);
 }
+/* FB : 전체선택자 우선순위 낮으므로 박스사이징 속성은 필요할 때 배치하도록 제거함 */
+
 /* rem계산 용이하도록, 가장 많은 폰트 속성 적용 */
 html {
     font-size: 62.5%;           /* 10px적용함 */
     color: rgba(255, 255, 255, 1);
-    font-family: 'GmarketSansMedium', sans-serif;
+    font-family: 'GmarketSansMedium';
     font-weight: 400;
 }
 
-/* header (1만시간의 법칙 이미지) */
-
-.a11y-hidden {                  /* 제목 글씨 숨기기 */
+/* FB 반영 : 공통된 스타일링 먼저 적용하기 */
+/* 공통: 제목 글씨 숨기기 */
+.a11y-hidden {                  
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
     width: 1px;
@@ -23,6 +25,24 @@ html {
     padding: 0;
     position: absolute;
 }
+/* 공통: 버튼 스타일 통일하기 */
+.btn {
+    border: none;
+    border-radius: 1.2rem;
+    padding: 2rem 5rem;
+    gap: 1rem;
+    background-color: rgba(252, 238, 33, 1);
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.15);
+
+    color: rgba(91, 35, 134, 1);
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* 헤더 시작 */
 /* 헤더의 백그라운드 이미지 깔기 (시계) */
 header {
     margin: 12rem;
@@ -31,8 +51,6 @@ header {
     align-items: center;
     height: 26.5rem;
     background: url(../images/clock.png) no-repeat center center;
-    background-size: 26.1rem 26.5rem;
-    text-align: center;
 }
 /* 헤더 내부에 img태그 속성주기 > 인라인요소인데 블록처럼 보여주기 */
 header img {
@@ -41,79 +59,86 @@ header img {
     display: block;
 }
 
-/* main 구조 
-    -sec1 - blockquote, div(div), ul(li)
-    -sec2 - div(btn, img), div(div2)
-   -sec3 - div(btn2) */
-
-main {
-    display: flex;
-    flex-direction: column;
-}
+/* main 시작 
+    -sec1 - q, div(img, div)
+    -sec2 - form, btn
+    -sec3 - ul(li btn2) */
 
 /* 메인-sec1 */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 /* 인용구 */
-.about .practice {
+.about .q {
     font-family :'OTEnjoystoriesBA';
     font-size: 3.6rem;
     font-weight: 700;
     color: rgba(245, 223, 77, 1);
     line-height: 100%;
-    letter-spacing: 0;
     text-align: center;
     vertical-align: middle;
 }
-/* 1만시간법칙은 설명, 따옴표  */
+/* 따옴표 배경이미지로 추가 */
 .desc {
-    margin: 7.8rem auto 0;
-    width: 37.3rem;
+    margin-top: 8rem;
 
-    font-size: 1.8rem;
-    line-height: 1.8;
-    letter-spacing: 0;
-    white-space: nowrap;
-    text-align: center;
-
-    /* 따옴표 양옆 배치를 위해 전체 row배열 */
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-}
-/* 따옴표 */
-.big {
-    display: inline-block;
     align-items: center;
-    width: 4.6rem;
-    height: 9.6rem;
-    font-weight: 700;
-    font-size: 9.6rem;
-    color: rgba(252, 238, 33, 0.3);
-        
-    }
+    width: 48.5rem;
+    background: url(../images/quotes.png) center / contain no-repeat;
+}
+/* 1만시간의 법칙은 정의 설명 */
+.desc .desc-text{
+    font-size: 1.8rem;
+    line-height: 130%;
+    text-align: center;
+    vertical-align: middle;
+}
 /* 일만시간 굵은 글씨 */
 .strong {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 2.4rem;
+    line-height: 100%;
     }
-/* 빈칸 있는 목록태그 */
-.about .example {
-    margin: 10.2rem auto 0;
-    font-size: 2.4rem;
+
+/* 메인-sec2 */
+/* 폼테그*/
+.form {
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 2.7rem;
+
+}
+.calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.profes, .practice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    font-size: 2.4rem;
 }
 /* 빈칸 속성 */
 .blank {
-    width: 22.8rem;
-    height: 5.6rem;
+    padding: 1.6rem 4rem;
+    border: none;
     background: rgba(255,255,255,1);
     border-radius: 0.8rem;
     text-align: center;
-    border: none;
-    padding: 1.2rem 4rem;
+    vertical-align: middle;
 }
 /* 빈칸 속성_고정값 */
 input::placeholder {
@@ -121,48 +146,31 @@ input::placeholder {
     color: rgba(186, 188, 190,1);
     font-size: 2.4rem;
     text-align: center;
-    line-height: 2.4rem;
+    vertical-align: middle;
+    line-height: 100%;
 }
-
-/* 메인-sec2 */
-/* 위 띄어쓰기, 배열을 위한 속성 */
-.howto {
-    margin: 11.5rem auto 0;
-    position: relative;
+.no-wrap {
+    white-space: nowrap; 
 }
-/* 버튼과 이미지 (부모요소) */
-.sub-title2 {
+/* 제출(버튼) */
+.btn.submit {
+    margin-top: 12rem;
     position: relative;
-    width: fit-content;
-    left: 50%;
-    transform: translateX(-50%);
-}
-/* 버튼요소 */
-.howmany {
-    color: rgba(91, 35, 134, 1);
-    font-family: 'GmarketSansMedium', sans-serif;
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 1.6rem;
-    white-space: nowrap;
-    position: relative;
-    border: none;
-
-    background-color: rgba(252, 238, 33, 1);
-    border-radius: 5.6rem;
-    padding: 2.1rem 4.9rem 2.1rem 4.9rem;
-    gap: 1rem;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    display: inline-block;
 }
 /* 클릭 이미지 */
-.click {
+.btn.submit::after {
+    content: "";
+    position: absolute;
+    background: url(../images/click.png) center / contain no-repeat;
     width: 6.4rem;
     height: 7.2rem;
-
-    position: absolute;
-    top: 1.4rem;
-    left: 100%;
+    right: -6.4rem;                        /* 버튼 밖으로 살짝 */
+    top: 14px;
 }
+
+/* 메인-sec3 */
+/* 결과 도출 화면 */
 /* 프로그래밍, 5110일 */
 .answer {
     display: flex;
@@ -173,6 +181,7 @@ input::placeholder {
     text-align: center;
 
     margin-top: 14.7rem;
+    margin-bottom: 12rem;
     font-weight: 400;
     font-size: 2.4rem;
     line-height: 100%;
@@ -181,36 +190,23 @@ input::placeholder {
 .days {
     margin-top: 4.1rem;
 }
-.big2 {
-        font-weight: 700;
-        font-size: 7.2rem;
-        vertical-align: middle;
+.big {
+    font-weight: 700;
+    font-size: 7.2rem;
+    vertical-align: middle;
     }
 
-/* sec3 */
-.button .btn {
-    margin-top: 12.7rem;
+/* 메인-sec4 */
+/* 외부 페이지로 연결되는 버튼 */
+.go-to-pages .two-btn {
     display: flex;
-    flex-direction: row;
+    flex-direction: center;
     justify-content: center;
     gap: 1.2rem;
 }
-/* class=btn */
-.program, .share {
+.btn.white {
+    background-color: rgba(255, 255, 255, 1);
     color: rgba(91, 35, 134, 1);
-    font-family: 'GmarketSansMedium', sans-serif;
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 1.6rem;
-
-    background-color: rgba(255,255,255,1);
-    border-radius: 5.6rem;
-    border: none;
-    padding: 2rem 5rem;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-}
-.program {
-    background-color: rgba(252, 238, 33, 1);
 }
 
 
@@ -285,8 +281,6 @@ input::placeholder {
 /* 푸터 */
 footer {
     margin: 13rem auto 0;
-    display: flex;
-    flex-direction: column;
 }
 .footer {
     display: flex;
@@ -299,21 +293,16 @@ footer {
     width: 12.5rem;
     height: 2.5rem;
 }
-/* 질문1 줄바꿈이 이상해요 */
 .copyright {
-    width: 36.5rem;
-    height: 3.4rem;
-    
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 100%;
     white-space: normal;
     text-align: center;
-    overflow-wrap: break-word;
-    word-break: keep-all;
 
     margin-top: 2rem;
+    margin-bottom: 10.6rem;
 
 }
 

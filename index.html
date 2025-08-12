@@ -18,11 +18,10 @@
       <!-- FB반영 : 섹션태그 안에는 꼭 헤딩태그를 쓸 것! -->
       <section class="about">
         <h2 class="a11y-hidden">1만 시간의 법칙, 훈련의 중요성</h2>
-          <q class="practice">"연습은 어제의 당신보다 당신을 더 낫게 만든다."</q>
+          <q class="q">"연습은 어제의 당신보다 당신을 더 낫게 만든다."</q>
           <!-- FB 반영: blockquote 대신 짧은 인용문 q태그로 변경 -->
           <div class="desc">
-            <img src="./images/quotes.png" alt="따옴표">
-            <!-- FB 반영: 따옴표는 알고봤더니 문자가 아니라 이미지였음! -->
+            <!-- FB 반영: 따옴표는 알고봤더니 문자가 아니라 이미지, css배경으로 넣기로 변경 -->
             <div class="desc-text">
                 <dfn id="10000hours" class="strong">1만 시간의 법칙</dfn>은</br>
                   어떤 분야의 전문가가 되기 위해서는</br>
@@ -34,38 +33,39 @@
         <!-- FB 후 수정: sec으로 묶은 기존 마크업을 수정하면서 sec구분을 재정렬 -->
         <!-- 기존에는 submit부분과 input부분 사이에서 sec을 구분하였음 (마크업을 잘못함!) -->
         <h2 class="a11y-hidden">1만 시간 훈련을 일자로 환산하기 입력폼</h2>
-        <form id="calc">
+        <form class="calc" id="calc">
           <label class="profes">나는
-            <input type="text" placeholder="예)프로그래밍">
+            <input class="blank" type="text" placeholder="예)프로그래밍">
             전문가가 될 것이다.
           </label>
-          <label class="practice">그래서 앞으로 매일 하루에
-            <input type="number" min="1" placeholder="예)5시간">
+          <label class="practice"><span class="no-wrap">그래서 앞으로 매일 하루에</span>
+            <input class="blank" type="number" min="1" placeholder="예)5시간">
             시간씩 훈련할 것이다. 
           </label>
         </form>
         <!-- FB반영: 위는 목록태그를 사용하였는데, 이건 사용자 입력 폼이기 때문에 form태그로 대체함 -->
-        <button type="submit" form="calc">
+        <button class="btn submit" type="submit" form="calc">
           나는 며칠 동안 훈련을 해야 1만 시간이 될까?
         </button>
         <!-- FB 반영: 클릭 손가락 이미지는 꾸밈 요소임으로 css에서 가상요소로 배치 -->
-      </section>
+
+        </section>
       <section class="result">
         <h2 class="a11y-hidden">원하는 전문가가 되기 위한 훈련 시간 결과</h2>
         <div class="answer">
           <div class="programing">
-            당신은 <span class="big2">프로그래밍</span>전문가가 되기 위해서
+            당신은 <span class="big">프로그래밍</span>전문가가 되기 위해서
           </div>
           <div class="days">
-            대략 <span class="big2">5110</span>일 이상 훈련하셔야 합니다! :)
+            대략 <span class="big">5110</span>일 이상 훈련하셔야 합니다! :)
           </div>
         </div>
       </section>
       <section class="go-to-pages">
         <h2 class="a11y-hidden">외부 페이지로 이동하기</h2>
-        <ul class="btn">
-            <li><button type="button" class="program">훈련하러 가기 GO!GO!</button></li>
-            <li><button type="button" class="share">공유하기</button></li>
+        <ul class="two-btn">
+            <li><button class="btn">훈련하러 가기 GO!GO!</button></li>
+            <li><button class="btn white">공유하기</button></li>
         </ul>
         <!-- FB반영 : div대신 ul태그 사용 -->
       </section>
