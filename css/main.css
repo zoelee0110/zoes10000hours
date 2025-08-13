@@ -200,8 +200,6 @@ input::placeholder {
 /* 외부 페이지로 연결되는 버튼 */
 .go-to-pages .two-btn {
     display: flex;
-    flex-direction: center;
-    justify-content: center;
     gap: 1.2rem;
 }
 .btn.wh {
