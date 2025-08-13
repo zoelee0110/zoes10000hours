@@ -348,6 +348,7 @@ header img {
     gap: 0.8rem;
     vertical-align: middle;
     text-align: center;
+    flex-wrap: wrap;
 }
 .blank {
     padding: 1.2rem 4rem;
